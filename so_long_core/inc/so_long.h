@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/28 14:09:22 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:21:14 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -246,6 +246,6 @@ size_t		ft_putstrs(const char **strs);
 /*
 **
 */
-int			so_long(t_map map);
+void		so_long(t_map map);
 
 #endif

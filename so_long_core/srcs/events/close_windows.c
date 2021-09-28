@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 20:08:12 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/28 14:04:56 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:15:29 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	close_windows(t_mlx *mlx)
 	ft_memdels((void **)&mlx->map.content, (void **)mlx->map.content);
 	ft_memdel((void **)&mlx->sprites.img);
 	system("leaks so_long");
-	if (mlx->end ==  1)
+	if (mlx->end == 1)
 		exit(EXIT_SUCCESS);
 	exit(EXIT_FAILURE);
 }

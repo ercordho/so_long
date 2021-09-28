@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:43:10 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/28 14:06:21 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:22:11 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	init_mlx(t_mlx	*mlx)
 	int	x;
 	int	y;
 
-	mlx->end = 1;
 	mlx->ptr = mlx_init();
 	if (mlx->ptr == NULL)
 		return (-1);
