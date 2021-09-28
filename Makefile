@@ -6,7 +6,7 @@
 #    By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:21:20 by ercordho          #+#    #+#              #
-#    Updated: 2021/09/28 13:49:35 by ercordho         ###   ########.fr        #
+#    Updated: 2021/09/28 15:05:54 by ercordho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ RM				=	rm -f
 
 OS := $(shell uname -s)
 ifeq ($(OS),Darwin)
-	CFLAGS		+=	-D MACOS -fsanitize=address
+#	CFLAGS		+=	-D MACOS -fsanitize=address
 	MLX			=	minilibx-mac
 	COMPILE		=	-L $(MLX) -lmlx -framework OpenGL -framework AppKit -lz
 endif
