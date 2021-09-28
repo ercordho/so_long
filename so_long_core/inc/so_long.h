@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/28 14:43:45 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:47:09 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,11 @@
 /*
 **	KEYCODE LINUX
 */
-#  define KEY_W 		119
-#  define KEY_S			115
-#  define KEY_A			97
-#  define KEY_D 		100
-#  define KEY_ESC 		65307
+#  define W_KEY 		119
+#  define A_KEY			97
+#  define S_KEY			115
+#  define D_KEY 		100
+#  define ESC_KEY 		65307
 # endif
 
 typedef struct s_file
