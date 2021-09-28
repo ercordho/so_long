@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/21 16:19:03 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:09:22 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ typedef struct s_mlx
 	t_map				map;
 	t_img				img;
 	t_sprites			sprites;
+	int					end;
 }						t_mlx;
 
 /*
@@ -149,6 +150,7 @@ int			draw_map(t_mlx *mlx);
 */
 int			error_bad_ext(const char *ext, int file_descriptor);
 int			error_extract_file_content(t_file *file);
+int			error_fee_many_arg(int argc);
 int			error_file_not_found(const char *file_path);
 void		error_malloc(void);
 int			error_map_is_empty(void);
@@ -163,7 +165,7 @@ int			error_parse_map_min_len(long line_pos, long line_len);
 int			error_parse_map_side(t_map map);
 int			error_parse_map_uppper_lower(t_map map);
 int			error_sprites_not_found(const char *file_path);
-int			error_too_much_movement(t_mlx *mlx);
+void		error_too_much_movement(t_mlx *mlx);
 
 /*
 **	EVENTS

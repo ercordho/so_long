@@ -6,13 +6,13 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 18:07:07 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/20 18:20:11 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/09/28 14:09:15 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/so_long.h"
 
-int	error_too_much_movement(t_mlx *mlx)
+void	error_too_much_movement(t_mlx *mlx)
 {
 	ft_putstr("\x1B[31m");
 	ft_putendl("ERROR");
@@ -26,5 +26,6 @@ int	error_too_much_movement(t_mlx *mlx)
 	ft_putendl(".");
 	ft_putendl("You lose :(");
 	ft_putstr("\x1B[0m");
-	return (close_windows(mlx));
+	mlx->end = -1;
+	close_windows(mlx);
 }

@@ -6,7 +6,7 @@
 #    By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:21:20 by ercordho          #+#    #+#              #
-#    Updated: 2021/09/21 16:19:48 by ercordho         ###   ########.fr        #
+#    Updated: 2021/09/28 13:49:35 by ercordho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS			=	so_long_core/srcs/ascii/ft_isalnum.c \
 					so_long_core/srcs/draw/draw_map.c \
 					so_long_core/srcs/error/error_bad_ext.c \
 					so_long_core/srcs/error/error_extract_file_content.c \
+					so_long_core/srcs/error/error_fee_many_arg.c \
 					so_long_core/srcs/error/error_file_not_found.c \
 					so_long_core/srcs/error/error_map_is_empty.c \
 					so_long_core/srcs/error/error_map_is_too_small.c \
