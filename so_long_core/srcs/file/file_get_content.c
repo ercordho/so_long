@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 02:03:24 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/21 11:09:56 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/11/05 19:31:28 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ static int	line_is_valid(t_file *file, int line_can_be_empty)
 
 	file->pos_x = 0;
 	file->pos_y++;
+	if (file->line == NULL)
+		return (-1);
 	if (*file->line == '\0')
 	{
 		if (line_can_be_empty == -1)

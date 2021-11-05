@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:38:47 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/17 01:41:41 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/11/05 19:27:34 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	get_next_line(int fd, char **line)
 	int			loop;
 	int			len;
 
-	if (line == NULL || (BUFFER_SIZE < 1 || read(fd, buffer, 0)))
+	if (line == NULL || (BUFFER_SIZE < 1 || read(fd, buffer, 0) == -1))
 		return (-1);
 	can_be_read = 1;
 	loop = 0;
