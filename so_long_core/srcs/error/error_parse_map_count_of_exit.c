@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 00:01:16 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/20 18:07:50 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/11/05 19:48:42 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	error_parse_map_count_of_exit(long count_of_exit)
 {
 	ft_putstr("\x1B[31m");
 	ft_putstr("ERROR\nThe number of exit present on the map is ");
-	if (count_of_exit < 0)
+	if (count_of_exit < 1)
 		ft_putstr("less ");
 	else
 		ft_putstr("greater ");
