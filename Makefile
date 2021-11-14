@@ -6,7 +6,7 @@
 #    By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:21:20 by ercordho          #+#    #+#              #
-#    Updated: 2021/11/05 19:42:06 by ercordho         ###   ########.fr        #
+#    Updated: 2021/11/14 02:26:42 by ercordho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ RM				=	rm -f
 
 OS := $(shell uname -s)
 ifeq ($(OS),Darwin)
+	CFLAGS		+= -D MACOS
 	MLX			=	minilibx-mac
 	COMPILE		=	-L $(MLX) -lmlx -framework OpenGL -framework AppKit -lz
 endif
