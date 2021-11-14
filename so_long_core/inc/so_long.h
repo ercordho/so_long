@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/11/14 02:25:38 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/11/14 02:30:20 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@
 /*
 **	KEYCODE MACOS
 */
-# ifdef MACOS
+# ifdef __APPLE__
 #  define W_KEY			13
 #  define A_KEY			0
 #  define S_KEY			1
