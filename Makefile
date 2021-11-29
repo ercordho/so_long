@@ -6,7 +6,7 @@
 #    By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:21:20 by ercordho          #+#    #+#              #
-#    Updated: 2021/11/14 02:32:59 by ercordho         ###   ########.fr        #
+#    Updated: 2021/11/29 17:01:06 by ercordho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,7 +93,6 @@ SRCS			=	so_long_core/srcs/ascii/ft_isalnum.c \
 OBJS			=	$(SRCS:.c=.o)
 
 all				:	$(NAME)
-bonus			:	$(NAME_BONUS)
 $(NAME) 		: 	$(OBJS)
 					@make -C $(MLX)
 					@$(CC) -o $@ $^ $(MLX)/libmlx.a $(COMPILE) $(CFLAGS)
