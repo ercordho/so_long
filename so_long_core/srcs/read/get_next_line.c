@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:38:47 by ercordho          #+#    #+#             */
-/*   Updated: 2021/11/05 19:45:52 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	read_line(char **line, char *buffer, int loop, int len)
 	tmp = *line;
 	j = -1;
 	*line = (char *)malloc(sizeof(char) * (BUFFER_SIZE * loop + 1));
-	if (line == NULL)
+	if (line == (void *)0)
 		return (clean_memory((void *)tmp, -1));
 	i = -1;
 	while (tmp && tmp[++i])
@@ -54,7 +54,7 @@ int	get_next_line(int fd, char **line)
 	int			loop;
 	int			len;
 
-	if (line == NULL || (BUFFER_SIZE < 1 || read(fd, buffer, 1) == -1))
+	if (line == (void *)0 || BUFFER_SIZE < 1 || read(fd, buffer, 1) == -1)
 		return (-1);
 	can_be_read = 1;
 	loop = 0;

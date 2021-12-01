@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 17:06:38 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/13 14:10:03 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/01 23:56:09 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@ size_t	ft_putstr(const char *str)
 {
 	size_t	size;
 
-	if (str == NULL)
-		return (ft_putstr("(null)"));
+	if (str == (void *)0)
+	{
+		if (__APPLE__)
+			return (ft_putstr("(null"));
+		return (ft_putstr("(nil)"));
+	}
 	size = 0;
 	while (*str)
 		size += ft_putchar(*str++);

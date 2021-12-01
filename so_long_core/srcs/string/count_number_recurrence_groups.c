@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 17:13:25 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/15 17:13:45 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	count_number_recurrence_groups(const char *str, const char *set)
 	int	count;
 	int	ret;
 
-	if (str == NULL || set == NULL)
+	if (str == (void *)0 || set == (void *)0)
 		return (0);
 	count = 0;
 	ret = 0;

@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 02:03:24 by ercordho          #+#    #+#             */
-/*   Updated: 2021/11/05 19:31:28 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	line_is_valid(t_file *file, int line_can_be_empty)
 
 	file->pos_x = 0;
 	file->pos_y++;
-	if (file->line == NULL)
+	if (file->line == (void *)0)
 		return (-1);
 	if (*file->line == '\0')
 	{
@@ -44,7 +44,7 @@ static char	*file_get_first_nodes(t_file *file, int line_can_be_empty)
 	if (line_is_valid(file, line_can_be_empty) == -1)
 		return (NULL);
 	content = (char *)ft_memsetmal('\0', ft_strlen(file->line) + 2);
-	if (content == NULL)
+	if (content == (void *)0)
 		return (NULL);
 	i = -1;
 	while (file->line[++i])
@@ -63,10 +63,10 @@ static char	*file_get_nodes(char *content, t_file *file, int line_can_be_empty)
 	content_len = ft_strlen(content);
 	total_len = content_len + ft_strlen(file->line) + 2;
 	content = ft_realloc(content, total_len, content_len);
-	if (content == NULL)
+	if (content == (void *)0)
 		return (NULL);
 	content = ft_strcat(content, file->line);
-	if (content == NULL)
+	if (content == (void *)0)
 		return (NULL);
 	return (content);
 }
@@ -78,7 +78,7 @@ char	*file_get_content(t_file *file, int line_can_be_empty)
 	content = NULL;
 	while (get_next_line(file->file_descriptor, &file->line) > 0)
 	{
-		if (content == NULL)
+		if (content == (void *)0)
 			content = file_get_first_nodes(file, line_can_be_empty);
 		else
 		{
@@ -86,12 +86,12 @@ char	*file_get_content(t_file *file, int line_can_be_empty)
 			if (content)
 				content[ft_strlen(content)] = '\n';
 		}
-		if (content == NULL)
+		if (content == (void *)0)
 			return (NULL);
 		ft_memdel((void **)&file->line);
 	}
 	content = file_get_nodes(content, file, line_can_be_empty);
-	if (content == NULL)
+	if (content == (void *)0)
 		return (NULL);
 	return (content);
 }

@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 18:10:56 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/17 02:19:18 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static const char	**get_xpm_paths(int i)
 	const char	**paths;
 
 	paths = (const char **)malloc(sizeof(char *) * 6);
-	if (paths == NULL)
+	if (paths == (void *)0)
 		return (NULL);
 	paths[0] = (const char *)ft_strdup(PLAYER);
 	paths[1] = (const char *)ft_strdup(EXIT);
@@ -48,7 +48,7 @@ static const char	**get_xpm_paths(int i)
 			ft_memdels((void **)&paths, (void **)paths);
 			return (NULL);
 		}
-		if (paths[i] == NULL)
+		if (paths[i] == (void *)0)
 		{
 			ft_memdels((void **)&paths, (void **)paths);
 			return (NULL);
@@ -65,21 +65,21 @@ int	init_sprites(t_sprites *sprites, void *mlx_ptr, int i)
 
 	sprites->img = NULL;
 	sprites->paths = get_xpm_paths(-1);
-	if (sprites->paths == NULL)
+	if (sprites->paths == (void *)0)
 		return (-1);
 	paths_len = ft_strslen(sprites->paths);
 	sprites->img = (t_img *)malloc(sizeof(t_img) * (paths_len + 1));
-	if (sprites->img == NULL)
+	if (sprites->img == (void *)0)
 		return (clean_memory(sprites->paths, -1));
 	while (sprites->paths[++i])
 	{
 		sprites->img[i].ptr = mlx_xpm_file_to_image(mlx_ptr, \
 			(char *)sprites->paths[i], &x, &y);
-		if (sprites->img[i].ptr == NULL)
+		if (sprites->img[i].ptr == (void *)0)
 			return (clean_memory(sprites->paths, -1));
 		sprites->img[i].data = mlx_get_data_addr(sprites->img[i].ptr, \
 			&sprites->img[i].bpp, &sprites->img[i].ll, &sprites->img[i].endian);
-		if (sprites->img[i].data == NULL)
+		if (sprites->img[i].data == (void *)0)
 			return (clean_memory(sprites->paths, -1));
 	}
 	sprites->img[i].ptr = NULL;

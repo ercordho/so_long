@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:34:02 by ercordho          #+#    #+#             */
-/*   Updated: 2021/09/21 10:55:17 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	init_map(t_map *map, const char *map_content)
 	if (ft_strlen(map_content) == 0)
 		return (error_map_is_empty());
 	map->content = ft_split(map_content, "\n");
-	if (map->content == NULL)
+	if (map->content == (void *)0)
 		return (-1);
 	map->length = (int)ft_strslen((const char **)map->content);
 	if (map->length < 3)
