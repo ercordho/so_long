@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_number_recurrence_groups.c                   :+:      :+:    :+:   */
+/*   countwords.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 17:13:25 by ercordho          #+#    #+#             */
-/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/02 00:09:13 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/so_long.h"
 
-int	count_number_recurrence_groups(const char *str, const char *set)
+int	countwords(const char *str, const char *set)
 {
 	int	count;
 	int	ret;

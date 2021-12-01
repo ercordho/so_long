@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/11/14 02:30:20 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/02 00:09:36 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,7 +227,7 @@ int			get_next_line(int file_descriptor, char **line);
 /*
 **	STRING
 */
-int			count_number_recurrence_groups(const char *str, const char *set);
+int			countwords(const char *str, const char *set);
 char		**ft_split(const char *str, const char *set);
 char		*ft_strcat(char *dst, const char *src);	
 int			ft_strcmp(const char *s1, const char *s2);

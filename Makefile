@@ -6,7 +6,7 @@
 #    By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:21:20 by ercordho          #+#    #+#              #
-#    Updated: 2021/11/29 17:01:06 by ercordho         ###   ########.fr        #
+#    Updated: 2021/12/02 00:09:26 by ercordho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ SRCS			=	so_long_core/srcs/ascii/ft_isalnum.c \
 					so_long_core/srcs/parse/parse_file.c \
 					so_long_core/srcs/parse/parse_map.c \
 					so_long_core/srcs/read/get_next_line.c \
-					so_long_core/srcs/string/count_number_recurrence_groups.c \
+					so_long_core/srcs/string/countwords.c \
 					so_long_core/srcs/string/ft_split.c \
 					so_long_core/srcs/string/ft_strcat.c \
 					so_long_core/srcs/string/ft_strcmp.c \

@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 14:18:29 by ercordho          #+#    #+#             */
-/*   Updated: 2021/12/01 23:56:46 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/02 00:10:00 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	**ft_split(const char *str, const char *set)
 	char	**strs;
 	int		y;
 
-	count_word = count_number_recurrence_groups(str, set);
+	count_word = countwords(str, set);
 	if (count_word == 0)
 		return (NULL);
 	strs = (char **)malloc(sizeof(char *) * (count_word + 1));
