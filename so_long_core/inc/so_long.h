@@ -6,19 +6,38 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/12/02 00:09:36 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/18 01:53:56 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "../../minilibx-mac/mlx.h"
+# ifndef __APPLE__
+#  define __APPLE__ 0
+# endif
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+
+# if __APPLE__ == 1
+#  include "../../minilibx-mac/mlx.h"
+#  define W_KEY			13
+#  define A_KEY			0
+#  define S_KEY			1
+#  define D_KEY			2
+#  define ESC_KEY		53
+# else
+#  include "../../minilibx-linux/mlx.h"
+#  define W_KEY 		119
+#  define A_KEY			97
+#  define S_KEY			115
+#  define D_KEY 		100
+#  define ESC_KEY 		65307
+# endif
 
 /*
 **	EXT
@@ -48,27 +67,6 @@
 # define ITEM			"sprites/item.xpm"
 # define GROUND			"sprites/ground.xpm"
 # define WALL			"sprites/wall.xpm"
-
-/*
-**	KEYCODE MACOS
-*/
-# ifdef __APPLE__
-#  define W_KEY			13
-#  define A_KEY			0
-#  define S_KEY			1
-#  define D_KEY			2
-#  define ESC_KEY		53
-# else
-
-/*
-**	KEYCODE LINUX
-*/
-#  define W_KEY 		119
-#  define A_KEY			97
-#  define S_KEY			115
-#  define D_KEY 		100
-#  define ESC_KEY 		65307
-# endif
 
 typedef struct s_file
 {
