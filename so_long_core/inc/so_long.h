@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/12/18 02:03:13 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/18 02:05:31 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@
 /*
 **	GNL BUFFER
 */
-# define BUFFER_SIZE	1
+# define BUFFER_SIZE	64
 
 /*
 **	SPRITES PATHS
