@@ -6,7 +6,7 @@
 /*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 15:37:50 by ercordho          #+#    #+#             */
-/*   Updated: 2021/12/18 02:00:59 by ercordho         ###   ########.fr       */
+/*   Updated: 2021/12/18 02:02:04 by ercordho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 #  define S_KEY			1
 #  define D_KEY			2
 #  define ESC_KEY		53
-# elif __APPLE__
+# else
 #  include "../../minilibx-linux/mlx.h"
 #  define W_KEY 		119
 #  define A_KEY			97
