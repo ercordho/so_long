@@ -6,7 +6,7 @@
 #    By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/09 11:21:20 by ercordho          #+#    #+#              #
-#    Updated: 2021/12/02 00:09:26 by ercordho         ###   ########.fr        #
+#    Updated: 2021/12/18 01:31:50 by ercordho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,10 +97,10 @@ $(NAME) 		: 	$(OBJS)
 					@make -C $(MLX)
 					@$(CC) -o $@ $^ $(MLX)/libmlx.a $(COMPILE) $(CFLAGS)
 %.o				:	%.c %.h
-					@$(CC) -w $(CFLAGS) -c $< $(MLX)/libmlx.a
+					@$(CC) $(CFLAGS) -c $< $(MLX)/libmlx.a
 clean			:
 					@$(RM) $(OBJS)
 fclean			:	clean
 					@$(RM) $(NAME)
 re				:	fclean all
-.PHONY			:	all clean fclean re so_long
+.PHONY			:	all clean fclean re
